@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind + PostCSS</title>
+  <link href="./dist/style.css" rel="stylesheet" />
+</head>
+<body class="bg-primaryCream">
+    <script src="dist/main.js"></script>
+
+   <!--Navigasi bar-->
+   <header class="w-full h-auto fixed bg-secondCream  z-40">
+    <nav class="container mx-auto h-[85px] bg-transparent flex items-center justify-between px-5">
+        <a href="index.html" class="flex items-center gap-1"  aria-label="Kembali ke Beranda Portfolio Alfarazah">
+            
+            <div class="text-black dark:text-white font-paragraf font-semibold text-[26px]">Alfarazah's Portfolio</div>
+        </a>
+
+        <div class="flex items-center justify-center gap-5">
+            <div class="hidden lg:block">
+                <a href="../index.html" class="font-paragraf font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[18px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4 transition-all duration-100">Beranda</a>
+                <a href="./article/artikel-dan-project.html" class="font-paragraf font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[18px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4 transition-all duration-100">Artikel</a>
+            </div>
+        </div>
+
+        
+        <button id="hamburger" onclick="toggleHamburger()" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1 group">
+            <span class="block h-0.5 w-6 dark:bg-white bg-black transition-transform duration-300 origin-center group-[.open]:rotate-45 group-[.open]:translate-y-1.5"></span>
+            <span class="block h-0.5 w-6 dark:bg-white bg-black transition-opacity duration-300 group-[.open]:opacity-0"></span>
+            <span class="block h-0.5 w-6 dark:bg-white bg-black transition-transform duration-300 origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-1.5"></span>
+        </button>
+        
+        
+    </nav> 
+        <div id="sidebar" class="fixed z-40 top-0 left-0 h-[100vh] w-72 bg-secondCream backdrop-blur-lg dark:backdrop-blur-lg dark:bg-primaryBlue transform -translate-x-full lg:-translate-x-full transition-transform duration-500 mt-[85px] flex flex-col p-5 ">
+            <a href="../index.html" class="font-raleway font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[20px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4">Beranda</a>
+            <a href="./article/artikel-dan-project.html" class="font-raleway font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[20px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4">Artikel</a>
+            
+            <a href="../index.html#kontakpage" class="font-raleway font-semibold py-5 px-5 bg-white hover:bg-supportBlue dark:hover:bg-supportPink dark:bg-blue rounded-md text-black dark:text-white text-[20px]">Kontak</a>      
+        </div>
+</header>
+</body>
+</html>
