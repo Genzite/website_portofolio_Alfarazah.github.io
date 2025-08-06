@@ -1,44 +1,438 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alfarazah's Portfolio</title>
-  <link href="./dist/style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfarazhah Portfolio</title>
+    <link href="/dist/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=open_in_new" />
 </head>
-<body class="bg-primaryCream">
-    <script src="dist/main.js"></script>
 
-   <!--Navigasi bar-->
-   <header class="w-full h-auto fixed bg-secondCream  z-40">
-    <nav class="container mx-auto h-[85px] bg-transparent flex items-center justify-between px-5">
-        <a href="index.html" class="flex items-center gap-1"  aria-label="Kembali ke Beranda Portfolio Alfarazah">
-            
-            <div class="text-black font-paragraf font-semibold text-[26px]">Alfarazah's Portfolio</div>
-        </a>
+<body class="">
+    <script src="/dist/main.js"></script>
 
-        <div class="flex items-center justify-center gap-5">
-            <div class="hidden lg:block">
-                <a href="../index.html" class="font-paragraf font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[18px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4 transition-all duration-100">Beranda</a>
-                <a href="./article/artikel-dan-project.html" class="font-paragraf font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[18px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4 transition-all duration-100">Artikel</a>
+    <!--Navigasi bar-->
+    <header class="w-full h-auto fixed bg-primaryCream top-0 z-40 shadow-lg">
+        <nav class="container mx-auto h-[85px] bg-transparent flex items-center justify-between px-5">
+            <a href="index.html" class="flex items-center gap-1" aria-label="Kembali ke Beranda Portfolio Alfarazah">
+
+                <div class="text-black font-title font-extrabold text-[20px]">Alfarazhah Portfolio</div>
+            </a>
+
+            <div class="flex items-center justify-center gap-5">
+                <div class="hidden lg:block">
+                    <a href="#HomePage"
+                        class="font-title font-semibold text-black hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream hover:border-b-4 transition-all duration-100">Home</a>
+                    <a href="#ExperiencePage"
+                        class="font-title font-semibold text-black hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream hover:border-b-4 transition-all duration-100">Experience</a>
+                    <a href="#EducationPage"
+                        class="font-title font-semibold text-black hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream hover:border-b-4 transition-all duration-100">Education</a>
+                    <a href="#ContactPage"
+                        class="font-title font-semibold text-white text-[18px] px-5 py-[10px] bg-nightNavy hover:bg-supportCream rounded-full transition-all duration-100">Contact</a>
+                </div>
+            </div>
+
+
+            <button id="hamburger" onclick="toggleHamburger()"
+                class="lg:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1 group">
+                <span
+                    class="block h-0.5 w-6 bg-black transition-transform duration-300 origin-center group-[.open]:rotate-45 group-[.open]:translate-y-1.5"></span>
+                <span class="block h-0.5 w-6 bg-black transition-opacity duration-300 group-[.open]:opacity-0"></span>
+                <span
+                    class="block h-0.5 w-6 bg-black transition-transform duration-300 origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-1.5"></span>
+            </button>
+
+
+        </nav>
+        <div id="sidebar"
+            class="fixed z-40 top-0 left-0 h-[100vh] w-72 bg-primaryCream backdrop-blur-lg dark:backdrop-blur-lg dark:bg-primaryBlue transform -translate-x-full lg:-translate-x-full transition-transform duration-500 mt-[85px] flex flex-col p-5 ">
+            <a href="#"
+                class="font-title font-semibold text-black hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream hover:border-b-4 transition-all duration-100 mb-5">Home</a>
+            <a href="#"
+                class="font-title font-semibold text-black hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream hover:border-b-4 transition-all duration-100 mb-5">Experience</a>
+            <a href="#"
+                class="font-title font-semibold text-black hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream hover:border-b-4 transition-all duration-100 mb-5">Education</a>
+            <a href="#"
+                class="font-title font-semibold text-white text-[18px] px-5 py-[10px] bg-nightNavy hover:bg-supportCream rounded-full transition-all duration-100 mb-5">Contact</a>
+        </div>
+    </header>
+
+    <div id="HomePage"
+        class="w-full h-[1100px] md:h-auto bg-[url(/assets/homepagebg.svg)] relative flex justify-center items-start md:items-center overflow-hidden">
+        <div
+            class="absolute w-[60%] md:w-auto -bottom-[250px] md:-bottom-[80%]  bg-supportCream/60 backdrop-blur-md rounded-t-2xl -z-0">
+            <img src="/assets/image.png" class="h-[700px] w-full md:h-[1000px] 2xl:h-auto" alt="">
+        </div>
+        <div
+            class="container mx-auto min-h-[100vh] bg-transparent flex flex-col md:flex-row justify-between gap-4 md:gap-0 pt-24 pb-10 px-5">
+
+            <div class="flex flex-col justify-center w-full md:w-[35%] space-y-2">
+                <div class="bg-secondCream/60 backdrop-blur-xl p-5 rounded-xl">
+                    <h2 class="text-nightNavy font-title font-bold text-[16px] xl:text-[20px]">Halo! terimakasih telah
+                        mengunjungi
+                        profil saya. Saya memiliki ketertarikan dan keahlihan dalam bidang administrasi, dengan
+                        pengalaman sebagai personal assistant. saya senang bekerja secara sistematis, efisien, dan
+                        struktur. selamat menjelajahi portfolio saya</h2>
+                </div>
+                <img src="/assets/alfa.jpeg"
+                    class="rounded-2xl w-full md:w-[300px] h-[250px] xl:w-[300px] xl:h-[300px] hidden md:block"
+                    alt="Alfarazhah image" srcset="">
+            </div>
+            <div class="flex flex-col justify-center space-y-5 w-full md:w-[35%]">
+                <div class="bg-nightNavy/50 backdrop-blur-lg rounded-xl p-5 space-y-5">
+                    <h3 class="font-paragraf font-bold text-white text-[26px] xl:text-[42px] xl:leading-[55px]">Bekerja
+                        cerdas, profesional, dan bertanggung jawab</h3>
+                    <h6 class="font-grand text-white font-medium text-[26px] xl:text-[32px]">Alfarazhah</h6>
+                </div>
+                <div class="flex gap-1 z-30">
+                    <button
+                        class="bg-primaryCream/80 shadow-lg backdrop-blur-lg font-title font-semibold py-3 px-10 md:px-4 lg:px-11 text-[18px] rounded-[20px] border-2 border-supportCream hover:bg-red-400"><a
+                            href="#">Mulai</a></button>
+                    <button
+                        class="bg-secondCream/80 shadow-lg backdrop-blur-lg font-title font-semibold py-3 px-5 md:px-2 lg:px-5 text-[18px] rounded-[20px] border-2 border-supportCream hover:bg-red-400"><a
+                            href="#">Hubungi sekarang</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ExperiencePage" class="w-full min-h-[100vh] bg-primaryCream relative z-10">
+        <div class="container mx-auto min-h-[100vh] py-20 px-5 flex flex-col justify-center items-center">
+
+            <section aria-label="Statistics section"
+                class="flex flex-col lg:flex-row justify-center items-center w-full gap-10 xl:gap-10 px-5">
+
+                <article class="flex items-center justify-center gap-5">
+                    <h2 class="sr-only">Years of experience</h2>
+                    <div>
+                        <span id="myCounter" class="counter text-[42px] lg:text-[50px] font-title font-bold"
+                            aria-label="500 years experience">+0</span>
+                    </div>
+                    <p class="leading-9 text-[32px] lg:text-[42px] font-title font-bold">
+                        years<br>experience
+                    </p>
+                </article>
+
+                <div class="bg-nightNavy w-1 h-32 rounded-full hidden md:block" aria-hidden="true"></div>
+                <div class="bg-nightNavy w-32 h-1 rounded-full block md:hidden" aria-hidden="true"></div>
+
+                <article class="flex items-center justify-center gap-5">
+                    <h2 class="sr-only">Work experiences</h2>
+                    <div class="w-[90px]">
+                        <span id="myCounter2" class="counter text-[42px] lg:text-[50px] font-title font-bold"
+                            aria-label="10 work experiences">+0</span>
+                    </div>
+                    <p class="leading-9 text-[32px] lg:text-[42px] font-title font-bold">
+                        work<br>experiences
+                    </p>
+                </article>
+
+                <div class="bg-nightNavy w-1 h-32 rounded-full hidden md:block" aria-hidden="true"></div>
+                <div class="bg-nightNavy w-32 h-1 rounded-full block md:hidden" aria-hidden="true"></div>
+
+                <article class="flex items-center justify-center gap-5">
+                    <h2 class="sr-only">Total tasks completed</h2>
+                    <div>
+                        <span id="myCounter3" class="counter text-[42px] lg:text-[50px] font-title font-bold"
+                            aria-label="300 total tasks completed">+0</span>
+                    </div>
+                    <p class="leading-9 text-[32px] lg:text-[42px] font-title font-bold">
+                        total tasks<br>completed
+                    </p>
+                </article>
+            </section>
+
+
+            <div class="mt-20 w-full">
+                <h2 class="font-title font-extrabold text-[32px] text-nightNavy">work experience</h2>
+                <div
+                    class="scrollbarExperience flex overflow-x-scroll scroll-smooth snap-x snap-mandatory space-x-4 py-4">
+                    <div
+                        class="bg-white min-w-[350px] h-[315px] snap-center rounded-[16px] shadow-lg p-3 flex flex-col justify-between">
+                        <div>
+                            <img src="/assets/image/ut.jpg" class="w-full h-[150px] rounded-[16px]" alt="">
+                            <h4 class="font-title font-extrabold text-nightNavy text-[23px]">Personal Assistant Manager
+                            </h4>
+                            <h6 class="font-title font-bold text-nightNavy text-[20px] -mt-1">PT Indojaya Tbk</h6>
+                            <p class="font-title font-medium text-nightNavy text-[16px] leading-5">Mengelola
+                                administrasi harian, mendukung pencatatan keuangan.</p>
+                        </div>
+                        <span class="text-[14px] font-title italic font-bold">Jakarta <span class="font-medium">• 3
+                                years experience</span> </span>
+                    </div>
+                    <div
+                        class="bg-white min-w-[350px] h-[315px] snap-center rounded-[16px] shadow-lg p-3 flex flex-col justify-between">
+                        <div>
+                            <img src="/assets/image/ut.jpg" class="w-full h-[150px] rounded-[16px]" alt="">
+                            <h4 class="font-title font-extrabold text-nightNavy text-[23px]">Personal Assistant Manager
+                            </h4>
+                            <h6 class="font-title font-bold text-nightNavy text-[20px] -mt-1">PT Indojaya Tbk</h6>
+                            <p class="font-title font-medium text-nightNavy text-[16px] leading-5">Mengelola
+                                administrasi harian, mendukung pencatatan keuangan.</p>
+                        </div>
+                        <span class="text-[14px] font-title italic font-bold">Jakarta <span class="font-medium">• 3
+                                years experience</span> </span>
+                    </div>
+                    <div
+                        class="bg-white min-w-[350px] h-[315px] snap-center rounded-[16px] shadow-lg p-3 flex flex-col justify-between">
+                        <div>
+                            <img src="/assets/image/ut.jpg" class="w-full h-[150px] rounded-[16px]" alt="">
+                            <h4 class="font-title font-extrabold text-nightNavy text-[23px]">Personal Assistant Manager
+                            </h4>
+                            <h6 class="font-title font-bold text-nightNavy text-[20px] -mt-1">PT Indojaya Tbk</h6>
+                            <p class="font-title font-medium text-nightNavy text-[16px] leading-5">Mengelola
+                                administrasi harian, mendukung pencatatan keuangan.</p>
+                        </div>
+                        <span class="text-[14px] font-title italic font-bold">Jakarta <span class="font-medium">• 3
+                                years experience</span> </span>
+                    </div>
+                    <div
+                        class="bg-white min-w-[350px] h-[315px] snap-center rounded-[16px] shadow-lg p-3 flex flex-col justify-between">
+                        <div>
+                            <img src="/assets/image/ut.jpg" class="w-full h-[150px] rounded-[16px]" alt="">
+                            <h4 class="font-title font-extrabold text-nightNavy text-[23px]">Personal Assistant Manager
+                            </h4>
+                            <h6 class="font-title font-bold text-nightNavy text-[20px] -mt-1">PT Indojaya Tbk</h6>
+                            <p class="font-title font-medium text-nightNavy text-[16px] leading-5">Mengelola
+                                administrasi harian, mendukung pencatatan keuangan.</p>
+                        </div>
+                        <span class="text-[14px] font-title italic font-bold">Jakarta <span class="font-medium">• 3
+                                years experience</span> </span>
+                    </div>
+                    <div
+                        class="bg-white min-w-[350px] h-[315px] snap-center rounded-[16px] shadow-lg p-3 flex flex-col justify-between">
+                        <div>
+                            <img src="/assets/image/ut.jpg" class="w-full h-[150px] rounded-[16px]" alt="">
+                            <h4 class="font-title font-extrabold text-nightNavy text-[23px]">Personal Assistant Manager
+                            </h4>
+                            <h6 class="font-title font-bold text-nightNavy text-[20px] -mt-1">PT Indojaya Tbk</h6>
+                            <p class="font-title font-medium text-nightNavy text-[16px] leading-5">Mengelola
+                                administrasi harian, mendukung pencatatan keuangan.</p>
+                        </div>
+                        <span class="text-[14px] font-title italic font-bold">Jakarta <span class="font-medium">• 3
+                                years experience</span> </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <h4 class="font-title font-extrabold text-nightNavy text-[32px] my-5">My expertise</h4>
+            <div class="flex justify-center items-center gap-5">
+                <img class="size-[40px] md:size-[50px]" src="/assets/logo/excel.png" alt="">
+                <img class="size-[40px] md:size-[50px]" src="/assets/logo/word.png" alt="">
+                <img class="size-[40px] md:size-[50px]" src="/assets/logo/powerpoint_888874 1.png" alt="">
+                <img class="size-[40px] md:size-[50px]" src="/assets/logo/devicon_canva.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="EducationPage" class="w-full h-auto bg-white z-20">
+        <div class="max-w-screen-xl mx-auto min-h-[100vh] py-20 px-5 flex flex-col justify-center">
+            <h2 class="font-title font-extrabold text-nightNavy text-[32px]">Education</h2>
+
+            <!-- Tab Navigation -->
+            <div class="rounded-lg p-1 mb-3 w-[275px]">
+                <div class="flex gap-1">
+                    <button
+                        class="tab-button active flex justify-center items-center w-[130px] py-3 rounded-[10px] font-title font-bold text-[16px] md:text-[20px] transition-all duration-200 ease-in-out bg-nightNavy text-white shadow-lg border-nightNavy border-2"
+                        data-tab="home">
+                        SMA
+                    </button>
+                    <button
+                        class="tab-button flex justify-center items-center w-[130px] py-3 rounded-[10px] font-title font-bold text-[16px] md:text-[20px] transition-all duration-200 ease-in-out bg-white text-gray-600 hover:bg-gray-50 border-nightNavy border-2"
+                        data-tab="about">
+                        S1
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="rounded-lg bg-white">
+                <!-- Home Tab -->
+                <div id="home" class="tab-content block py-8">
+                    <div class="flex flex-col md:flex-row gap-2 lg:gap-0">
+                        <img class="w-full md:w-[50%] lg:w-[500px] rounded-[16px]" src="/assets/image/ut.jpg" alt="">
+                        <div class="lg:px-5">
+                            <h5 class="font-title font-extrabold text-[26px]">SMA NEGERI 4 BANDUNG</h5>
+                            <p class="font-title font-semibold text-[20px]">(IPS) Ilmu Pengetahuan Sosial</p>
+                            <span class="font-title font-semibold text-[20px]">Tahun 2019 - 2023</span>
+
+                            <div
+                                class="scrollbarEdu flex gap-1 overflow-x-auto snap-mandatory snap-x space-x-2 py-2 mt-4">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- S1 Tab -->
+                <div id="about" class="tab-content hidden py-8">
+                    <div class="flex flex-col md:flex-row gap-2 lg:gap-0">
+                        <img class="w-full md:w-[50%] lg:w-[500px] full rounded-[16px]" src="/assets/image/ut.jpg"
+                            alt="">
+                        <div class="lg:px-5">
+                            <h5 class="font-title font-extrabold text-[26px]">Universitas Negeri Jakarta(UNJ)</h5>
+                            <p class="font-title font-semibold text-[20px]">(S1) Administrasi Perkantoran
+                            </p>
+                            <span class="font-title font-semibold text-[20px]">Tahun 2019 - 2023</span>
+
+                            <div
+                                class="scrollbarEdu flex gap-1 overflow-x-auto snap-mandatory snap-x space-x-2 py-2 mt-4">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                                <img class="w-[270px] h-[190px] rounded-[16px] snap-center" src="/assets/image/ut.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ContactPage" class="w-full min-h-[100vh] bg-primaryCream flex items-center">
+        <div class="container mx-auto px-5 py-20 ">
+            <div class="relative">
+                <div class="columns-3 md:columns-4 gap-2 relative">
+                    <img src="/assets/image/ut.jpg" class="w-full h-[135px] lg:h-[222px] rounded-2xl opacity-30" />
+                    <img src="/assets/image/ut.jpg" class="w-full h-[65px] lg:h-[190px] rounded-2xl opacity-30 mt-2" />
+                    <img src="/assets/image/ut.jpg" class="w-full h-[105px] lg:h-[190px] rounded-2xl opacity-30 mt-2" />
+                    <img src="/assets/image/ut.jpg" class="w-full h-[65px] lg:h-[211px] rounded-2xl opacity-30 mt-2" />
+                    <img src="/assets/image/ut.jpg" class="w-full h-[120px] lg:h-[211px] rounded-2xl opacity-30 mt-2" />
+                    <img src="/assets/image/ut.jpg" class="w-full h-[90px] lg:h-[180px] rounded-2xl opacity-30 mt-2" />
+                    <img src="/assets/image/ut.jpg" class="w-full h-[150px] lg:h-[230px] rounded-2xl opacity-30 mt-2" />
+                    <img src="/assets/image/ut.jpg" class="w-full h-[80px] lg:h-[160px] rounded-2xl opacity-30 mt-2" />
+                </div>
+                <div class="absolute top-0 w-full h-[50px] bg-gradient-to-t from-transparent to-primaryCream"></div>
+                <div class="absolute bottom-0 w-full h-[300px] bg-gradient-to-b from-transparent to-primaryCream"></div>
+            </div>
+            <div class="max-w-screen-xl mx-auto flex flex-col items-center justify-center mt-20">
+                <h2 class="font-title italic font-bold text-black text-[20px] md:text-[26px]">My Social Media</h2>
+                <h5
+                    class="font-title font-bold text-black text-[32px] lg:text-[42px] xl:text-[50px] text-center leading-10 lg:leading-[50px]">
+                    Every pixel has a
+                    <span class="text-supportCream">purpose.</span>
+                    <span class="underline underline-offset-4 decoration-supportCream"> Explore</span> my <span
+                        class="bg-supportCream px-3 rounded-lg text-white">journey</span>
+                    through design, and creation.
+                </h5>
+                <span class="font-title font-semibold text-black text-[16px] md:text-[20px]">Let's connect and grow
+                    together</span>
+
+                <div class="max-w-screen-lg grid grid-cols-1 md:grid-cols-2 w-full gap-[10px] md:gap-[20px] mt-10">
+                    <button class="w-full h-[80px] bg-white flex items-center justify-between rounded-[18px] p-5">
+                        <div class="flex items-center gap-3">
+                            <img src="assets/logo/instagram.png" class="size-[40px]" alt="">
+                            <a href=""
+                                class="font-title font-bold text-nightNavy text-[20px] hover:text-blue-600 duration-300">Alfarazhah</a>
+
+                        </div>
+                        <div class="flex flex-row items-center gap-1 hover:text-blue-600 duration-300">
+                            <a href="" class="font-title font-semibold text-[16px]">view</a>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                        </div>
+                    </button>
+
+                    <button class="w-full h-[80px] bg-white flex items-center justify-between rounded-[18px] p-5">
+                        <div class="flex items-center gap-3">
+                            <img src="assets/logo/facebook.png" class="size-[40px]" alt="">
+                            <a href=""
+                                class="font-title font-bold text-nightNavy text-[20px] hover:text-blue-600 duration-300">Alfarazhah</a>
+                        </div>
+                        <div class="flex flex-row items-center gap-1 hover:text-blue-600 duration-300">
+                            <a href="" class="font-title font-semibold text-[16px]">view</a>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                        </div>
+
+                    </button>
+
+                    <button class="w-full h-[80px] bg-white flex items-center justify-between rounded-[18px] p-5">
+                        <div class="flex items-center gap-3">
+                            <img src="assets/logo/youtube.png" class="size-[40px]" alt="">
+                            <a href=""
+                                class="font-title font-bold text-nightNavy text-[20px] hover:text-blue-600 duration-300">Alfarazhah</a>
+                        </div>
+                        <div class="flex flex-row items-center gap-1 hover:text-blue-600 duration-300">
+                            <a href="" class="font-title font-semibold text-[16px]">view</a>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                        </div>
+
+                    </button>
+
+                    <button class="w-full h-[80px] bg-white flex items-center justify-between rounded-[18px] p-5">
+                        <div class="flex items-center gap-3">
+                            <img src="assets/logo/twitter.png" class="size-[40px]" alt="">
+                            <a href=""
+                                class="font-title font-bold text-nightNavy text-[20px] hover:text-blue-600 duration-300">Alfarazhah</a>
+                        </div>
+                        <div class="flex flex-row items-center gap-1 hover:text-blue-600 duration-300">
+                            <a href="" class="font-title font-semibold text-[16px]">view</a>
+                            <span class="material-symbols-outlined">
+                                open_in_new
+                            </span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full h-auto bg-white">
+        <div class="container mx-auto h-auto lg:h-[280px] flex flex-col justify-center gap-3 p-5">
+            <div class="flex flex-col lg:flex-row items-start md:items-center justify-between gap-5 py-5">
+                <div>
+                    <span class="font-title font-black text-[42px]  text-black leading-[40px]">
+                        Alfarazhah <br class="hidden lg:block">Portfolio
+                    </span>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-center gap-5">
+                    <h6 class="font-title font-extrabold text-[32px] text-black md:-mt-1 p-5">Menu</h6>
+                    <a href="#HomePage"
+                        class="font-title font-semibold text-black/30 hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream border-transparent border-b-4 hover:border-b-4 transition-all duration-100">Home</a>
+                    <a href="#ExperiencePage"
+                        class="font-title font-semibold text-black/30 hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream border-transparent border-b-4 hover:border-b-4 transition-all duration-100">Experience</a>
+                    <a href="#EducationPage"
+                        class="font-title font-semibold text-black/30 hover:text-supportCream  dark:text-white text-[18px] p-5 hover:border-supportCream border-transparent border-b-4 hover:border-b-4 transition-all duration-100">Education</a>
+                    <a href="#ContactPage"
+                        class="font-title font-semibold text-black/70 hover:text-white text-[18px] px-5 py-[10px] border border-black hover:border-supportCream hover:bg-supportCream rounded-full transition-all duration-100 text-center">Contact</a>
+                </div>
+            </div>
+            <div class="bg-nightNavy w-full h-[2px] md:h-[4px] rounded-full"></div>
+            <div class="flex justify-center py-5">
+                <span class="font-title font-semibold text-[14px] md:text-[16px]">alfarazhahPortfolio &copy;
+                    2025 - 2026
+                    |
+                    Dikembangkan oleh <a href="https://genzite.my.id/" class="text-blue-500">Genzite</a> </span>
             </div>
         </div>
 
-        
-        <button id="hamburger" onclick="toggleHamburger()" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1 group">
-            <span class="block h-0.5 w-6 dark:bg-white bg-black transition-transform duration-300 origin-center group-[.open]:rotate-45 group-[.open]:translate-y-1.5"></span>
-            <span class="block h-0.5 w-6 dark:bg-white bg-black transition-opacity duration-300 group-[.open]:opacity-0"></span>
-            <span class="block h-0.5 w-6 dark:bg-white bg-black transition-transform duration-300 origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-1.5"></span>
-        </button>
-        
-        
-    </nav> 
-        <div id="sidebar" class="fixed z-40 top-0 left-0 h-[100vh] w-72 bg-secondCream backdrop-blur-lg dark:backdrop-blur-lg dark:bg-primaryBlue transform -translate-x-full lg:-translate-x-full transition-transform duration-500 mt-[85px] flex flex-col p-5 ">
-            <a href="../index.html" class="font-raleway font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[20px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4">Beranda</a>
-            <a href="./article/artikel-dan-project.html" class="font-raleway font-semibold text-black hover:text-supportBlue dark:hover:text-supportPink dark:text-white text-[20px] p-5 hover:border-supportBlue dark:hover:border-supportPink hover:border-b-4">Artikel</a>
-            
-            <a href="../index.html#kontakpage" class="font-raleway font-semibold py-5 px-5 bg-white hover:bg-supportBlue dark:hover:bg-supportPink dark:bg-blue rounded-md text-black dark:text-white text-[20px]">Kontak</a>      
-        </div>
-</header>
+    </div>
+
+
+
+    <script src="dist/sideNavbar.js"></script>
+    <script src="/dist/navTabs.js"></script>
+    <script src="/dist/countUp.js"></script>
 </body>
+
 </html>

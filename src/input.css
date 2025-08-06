@@ -1,5 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+/* scrollbar browser  */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #DAC0A3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1e58af;
+}
+
+/*  */
+
+
+/* scrollbar education */
+.scrollbarEdu::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scrollbarEdu::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #1e58af;
+}
+
+.scrollbarEdu::-webkit-scrollbar-thumb:hover {
+    border-radius: 8px;
+    background-color: #0F2C59;
+}
+
+.scrollbarEdu::-webkit-scrollbar-track {
+    background-color: #EADBC8;
+}
+
+/*  */
+
+
+/* scrollbar experience */
+.scrollbarExperience::-webkit-scrollbar {
+    width: full;
+    height: 9px;
+}
+
+.scrollbarExperience::-webkit-scrollbar-track {
+    background-color: #DAC0A3;
+}
+
+.scrollbarExperience::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #1e58af;
+}
+
+.scrollbarExperience::-webkit-scrollbar-thumb:hover {
+    border-radius: 8px;
+    background-color: #1e58af;
+}
+
+
+
+/*  */
