@@ -5,6 +5,14 @@
 @tailwind utilities;
 @tailwind variants;
 
+/* bg homepage */
+.homepage {
+    background-image: url(../assets/homepagebg.svg);
+}
+
+/*  */
+
+
 /* Style the tab */
 .tab {
     overflow: hidden;
